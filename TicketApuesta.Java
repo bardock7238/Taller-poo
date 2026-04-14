@@ -37,7 +37,7 @@ public class TicketApuesta {
         sb.append(String.format("Ticket: %s | Jugador: %s | Monto: $%.2f%n",
                 codigo, jugador.getNombre(), montoTotal));
         for (LineaApuesta linea : lineas) {
-            sb.append("  → ").append(linea).append("\n");
+            sb.append("- ").append(linea).append("\n");
         }
         return sb.toString();
     }

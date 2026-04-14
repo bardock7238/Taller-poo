@@ -217,9 +217,16 @@ public class Main {
 
     // --- helpers de entrada ---
 
-    private static String leerTexto(String mensaje) {
-        System.out.print(mensaje);
-        return scanner.nextLine().trim();
+   private static String leerTexto(String mensaje) {
+        while (true) {
+           System.out.print(mensaje);
+           String valor = scanner.nextLine().trim();
+           if (valor.isEmpty()) {
+            System.out.println("El campo no puede estar vacío.");
+            continue;
+           }
+           return valor;
+        }
     }
 
     private static int leerEntero(String mensaje) {
