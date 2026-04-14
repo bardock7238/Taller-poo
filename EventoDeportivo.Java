@@ -17,12 +17,12 @@ public class EventoDeportivo {
 
     // devuelve la cuota según el pronóstico elegido
     public double getCuotaPorPronostico(TipoPronostico pronostico) {
-        switch (pronostico) {
-            case LOCAL:     return cuotaLocal;
-            case EMPATE:    return cuotaEmpate;
-            case VISITANTE: return cuotaVisitante;
-            default:        return 1.0;
-        }
+        return switch (pronostico) {
+            case LOCAL -> cuotaLocal;
+            case EMPATE -> cuotaEmpate;
+            case VISITANTE -> cuotaVisitante;
+            default -> 1.0;
+        };
     }
 
     // getters y setters

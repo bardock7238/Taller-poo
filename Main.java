@@ -33,13 +33,14 @@ public class Main {
 
     private static void procesarOpcion(int opcion) {
         switch (opcion) {
-            case 1: registrarJugador();     break;
-            case 2: registrarEvento();      break;
-            case 3: crearApuestaSimple();   break;
-            case 4: crearApuestaMultiple(); break;
-            case 5: casa.listarTickets();   break;
-            case 0: break;
-            default: System.out.println("Opción no válida.");
+            case 1 -> registrarJugador();
+            case 2 -> registrarEvento();
+            case 3 -> crearApuestaSimple();
+            case 4 -> crearApuestaMultiple();
+            case 5 -> casa.listarTickets();
+            case 0 -> {
+            }
+            default -> System.out.println("Opción no válida.");
         }
     }
 
@@ -198,12 +199,19 @@ public class Main {
                 evento.getCuotaLocal(), evento.getCuotaEmpate(), evento.getCuotaVisitante());
         int op = leerEntero("Pronóstico (1/2/3): ");
         switch (op) {
-            case 1: return TipoPronostico.LOCAL;
-            case 2: return TipoPronostico.EMPATE;
-            case 3: return TipoPronostico.VISITANTE;
-            default:
+            case 1 -> {
+                return TipoPronostico.LOCAL;
+            }
+            case 2 -> {
+                return TipoPronostico.EMPATE;
+            }
+            case 3 -> {
+                return TipoPronostico.VISITANTE;
+            }
+            default -> {
                 System.out.println("Opción inválida.");
                 return null;
+            }
         }
     }
 
