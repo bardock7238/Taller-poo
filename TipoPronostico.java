@@ -1,5 +1,5 @@
 
-public enum TipoPronosticoi {
+public enum TipoPronostico {
     LOCAL,
     EMPATE,
     VISITANTE
